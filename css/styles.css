@@ -5,12 +5,25 @@
 }
 
 html {
-  background-color: aqua;
+  background-color: #7e7c7c;
+  height: 95vh;
+  background-image: url("../assets/img/white-paper-texture-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 header {
-  width: 100vw;
+  width: 95vw;
   height: 5vh;
+  margin-top: 0.5rem;
 }
 
 h1 {
@@ -28,11 +41,55 @@ section {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0.5rem;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  font-size: 1.2rem;
+}
+
+span {
+  font-size: 1.1rem;
+}
+
+button {
+  font-size: 1.2rem;
+  color: azure;
+  padding: 0.3em 1.2em;
+  background-color: #7e7c7c;
+  border: 2px solid #494948;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+button:hover {
+  border-color: #494948;
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em #526061;
+  transform: translateY(-0.15em);
+  cursor: pointer;
 }
 
 #word-container {
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  flex: 1 2 10%;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 0.1rem;
 }
 
 img {
