@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: aqua;
+}
+
+header {
+  width: 100vw;
+  height: 5vh;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 2.5rem;
+}
+
+section {
+  width: 100%;
+  /* height: calc(100vh / 3); */
+  height: 30vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid black;
+}
+
+#word-container {
+  flex-flow: row wrap;
+}
+
+img {
+  max-width: 100%;
+  height: 80%;
+}

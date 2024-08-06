@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game App</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Ahorcado</h1>
+    </header>
+
+    <main>
+      <section id="score-board">
+        <form>
+          <label for="userInput">Escribe una letra</label>
+          <input type="text" name="userInput" id="userInput" />
+          <span id="inputHelper"></span>
+          <button type="submit" disabled id="buttonTestLetter">Probar</button>
+        </form>
+      </section>
+
+      <section id="word-container"></section>
+
+      <section id="hangman-pictures">
+        <img id="hangmanImg" src="./assets/img/0.jpg" alt="hangman-picture" />
+      </section>
+    </main>
+
+    <script src="./js/words.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
