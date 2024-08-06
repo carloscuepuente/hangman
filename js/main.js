@@ -72,11 +72,11 @@ const handleInputChange = (event) => {
   // todo hay que validar también si no es un carácter especial
   if (input.length === 1 && input !== "" && isNaN(input)) {
     userHelper.textContent = "input valido";
-    userHelper.style.color = "green";
+    userHelper.style.color = "RGB(0,149,142)";
     buttonTestLetter.disabled = false;
   } else {
     userHelper.textContent = "ingresa solo una letra";
-    userHelper.style.color = "red";
+    userHelper.style.color = "RGB(255,85,85)";
     buttonTestLetter.disabled = true;
   }
 };
@@ -96,9 +96,10 @@ const testLetter = (event) => {
     console.log(userLetters);
     // turnWordIn_(randomWord);
     turn_inLetter(randomWord);
-    if (isWinner()) {
+    if (isWinner(randomWordLetters, userLetters)) {
       // !! correr aquí la condición de victoria
       console.log("ganaste");
+      alert("ganaste,crear el modal de ganaste");
     }
   } else {
     //* !! aquí lo que pase si no esta bien la letra
@@ -142,7 +143,9 @@ const failureCheckAndDisplay = (failed) => {
 
     case 6:
       hangmanImg.src = `../assets/img/6.jpg`;
-      alert("perdiste");
+      alert(
+        `perdiste la palabra era ${randomWord} , crear el modal de perdiste`
+      );
       // !! función para reiniciar el juego
       break;
 
